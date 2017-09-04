@@ -5,11 +5,11 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    vector<Option> options = parseOptions(argc, argv);
+    auto options = parseOptions(argc, argv);
 
-    for each (Option op in options)
+    for each (auto iter in options)
     {
-        cout << "Option: " << op.name << "\n";
-        cout << "Value:  " << op.value << "\n\n";
+        cout << iter.first << endl;
+        cout << iter.second << "\n\n";
     }
 }
